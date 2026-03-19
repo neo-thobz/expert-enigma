@@ -1,3 +1,18 @@
 spring:
   application:
     name: expert-enigma-api
+  datasource:
+    url: ${SPRING_DATASOURCE_URL}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+ollama:
+  base-url: ${OLLAMA_BASE_URL}
+
+server:
+  port: 8080
