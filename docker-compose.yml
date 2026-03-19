@@ -6,11 +6,8 @@ services:
     depends_on:
       - ollama
       - db
-    environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/cvdb
-      SPRING_DATASOURCE_USERNAME: postgres
-      SPRING_DATASOURCE_PASSWORD: password
-      OLLAMA_BASE_URL: http://ollama:11434
+    env_file:
+      - ./expert-enigma-api/.env
 
   ollama:
     image: ollama/ollama
@@ -27,7 +24,7 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: password
     ports:
-      - "5332:5432"
+      - "5432:5432"
     volumes:
     - ./init.sql:/docker-entrypoint-initdb.d/init.sql
     
