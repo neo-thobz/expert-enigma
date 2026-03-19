@@ -27,6 +27,6 @@ public class DocumentChunk {
     private String content;
 
     // pgvector column type
-    @Column(columnDefinition = "VECTOR(1536)")
+    @Column(columnDefinition = "VECTOR(768)")
     private float[] embedding;
 }
