@@ -19,7 +19,6 @@ services:
       - "11434:11434"
     volumes:
       - ollama_data:/root/.ollama
-    command: ["ollama", "serve"]
 
   db:
     image: pgvector/pgvector:pg16
