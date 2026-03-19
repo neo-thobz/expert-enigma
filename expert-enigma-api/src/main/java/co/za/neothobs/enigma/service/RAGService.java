@@ -7,7 +7,9 @@ import co.za.neothobs.enigma.model.DocumentChunk;
 import co.za.neothobs.enigma.repository.VectorRepository;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 
+@Service
 @RequiredArgsConstructor
 public class RAGService {
 
